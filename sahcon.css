@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  --cola: #D8F090;
+  --colb: #C0D818;
+  --colc: #1f0e20;
+
+  background-color: var(--colc);
+  color: var(--colb)
+}
+
+#main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+a { color: var(--colb); }
+a:hover { color: var(--cola); }
+
+/* BANNER */
+
+#banner img {
+  max-width: 100%;
+}
+
+/* NAV */
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav > *:hover {
+  background-color: var(--cola);
+}
+
+nav > * {
+  position: relative;
+  flex-grow: 1;
+  text-align: center;
+
+  background-color: var(--colb);
+  padding: 0.25em 0.1em;
+  color: black;
+}
+
+nav > a:hover {
+  color: black;
+}
+
+nav ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  display: none;
+  text-align: left;
+
+  margin: 0;
+  width: max-content;
+
+  background-color: black;
+  padding: 0.5em 1em;
+  border-radius: 0 10px 10px 10px;
+}
+
+nav ul a { color: var(--cola) }
+nav ul a:hover { color: var(--colb) }
+
+nav span:hover ul, nav ul:hover {
+  display: block;
+}
+
+nav span::after {
+  content: "";
+}
+
+/* content */
+
+#flexWrap {
+  display: flex;
+  gap: 10px;
+}
+
+#content {
+  padding: 1em;
+  width: 70%;
+}
+
+#content img {
+  max-width: 100%;
+}
+
+h1, h2 {
+  text-decoration: underline;
+}
+
+#updates {
+  max-width: 30%;
+  padding: 1em;
+}
+
+#updates > div {
+  border: solid var(--cola);
+  padding: 0 1em;
+}
+
+.log {
+  color: black;
+  padding: 12px 5%;
+  border: 1px dashed gray;
+  margin: 1em 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+#daytah {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+
+  opacity: 0.2;
+  transition: opacity 0.25s;
+}
+
+#daytah:hover {
+  opacity: 1;
+}
