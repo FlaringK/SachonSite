@@ -82,6 +82,28 @@ nav span::after {
   content: "";
 }
 
+#entercon {
+  background-color: #0086EB;
+}
+
+#entercon:hover {
+  background-color: #10E0FF;
+}
+
+#entercon div {
+  position: absolute;
+  bottom: 100%;
+  width: 150%;
+  text-align: left;
+  padding: 0.5em 1em;
+  background-color: #10E0FF;
+  border-radius: 10px 10px 10px 0;
+  left: 0;
+  display: none;
+}
+
+#entercon:hover div { display: block; }
+
 /* content */
 
 #flexWrap {
@@ -110,6 +132,13 @@ h1, h2 {
 #updates > div {
   border: solid var(--cola);
   padding: 0 1em;
+  margin-bottom: 1em;
+}
+
+#dates {
+  background-color: var(--colb);
+  color: black;
+  border: solid var(--colb) !important;
 }
 
 .log {
@@ -132,4 +161,22 @@ h1, h2 {
 
 #daytah:hover {
   opacity: 1;
+}
+
+/* Foot */
+
+#foot ul {
+  text-align: right;
+}
+
+#foot ul li {
+  display: inline;
+}
+
+#foot ul li::after {
+  content: " • "
+}
+
+#foot ul li:last-child:after {
+  content: ""
 }
