@@ -227,19 +227,6 @@ audio::-webkit-media-controls-panel {
   font-weight: 600;
 }
 
-#daytah {
-  position: fixed;
-  bottom: 1em;
-  right: 1em;
-
-  opacity: 0.2;
-  transition: opacity 0.25s;
-}
-
-#daytah:hover {
-  opacity: 1;
-}
-
 /* Foot */
 
 #foot ul {
@@ -256,4 +243,23 @@ audio::-webkit-media-controls-panel {
 
 #foot ul li:last-child:after {
   content: ""
+}
+
+#daytah {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+
+  opacity: 0.2;
+  transition: opacity 0.25s;
+}
+
+#daytah:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1464px) {
+  #daytah {
+    display: none;
+  }
 }
