@@ -1,3 +1,8 @@
+@font-face {
+  font-family: homestuckRegular;
+  src: url(./assets/HOMESTUCK\ REGULAR\ \(EPILOGUES\ FONT\).TTF);
+}
+
 body {
   margin: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -121,7 +126,10 @@ nav span::after {
 }
 
 h1, h2 {
-  text-decoration: underline;
+  font-family: homestuckRegular;
+  font-weight: 400;
+  border-bottom: currentColor solid;
+  text-transform: uppercase;
 }
 
 #updates {
@@ -129,16 +137,26 @@ h1, h2 {
   padding: 1em 0 0 1em;
 }
 
-#updates > div {
-  border: solid var(--cola);
-  padding: 0 1em;
-  margin-bottom: 1em;
-}
-
 #dates {
   background-color: var(--colb);
   color: black;
   border: solid var(--colb) !important;
+  padding: 0 1em;
+  margin-bottom: 1em;
+}
+
+#music {
+  padding-bottom: 1em;
+}
+
+#music audio {
+  background-color: var(--cola);
+  width: 100%;
+  margin-top: -1em;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: var(--cola);
 }
 
 .log {
