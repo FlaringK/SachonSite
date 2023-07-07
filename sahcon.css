@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   --cola: #D8F090;
   --colb: #C0D818;
@@ -144,9 +144,9 @@ nav span::after {
   animation-duration: 30s;
 }
 
-.ticker-transition:hover {
-  /* animation-play-state: paused;
-  cursor: pointer; */
+.ticker-transition:active {
+  animation-play-state: paused;
+  cursor: pointer;
 }
 
 .ticker-item {
