@@ -8,6 +8,7 @@ const loadPage = async () => {
   pageHtml = await fetch(`./pages/${getUrlPage()}.html`).then(e => e.text())
 
   document.getElementById("content").innerHTML = pageHtml
+  window.scrollTo(0, 0);
 }
 
 const clickLink = (event, link) => {
