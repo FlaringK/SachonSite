@@ -10,6 +10,8 @@ body {
   --cola: #D8F090;
   --colb: #C0D818;
   --colc: #1f0e20;
+  --cold: #10E0FF;
+  --cole: #0086EB;
 
   background-color: var(--colc);
   color: var(--colb)
@@ -33,9 +35,10 @@ a:hover { color: var(--cola); }
 
 nav {
   display: flex;
-  align-items: center;
-  gap: 2px;
+  align-items: stretch;
+  background-color: var(--colb);
   font-weight: bold;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -80,7 +83,7 @@ nav ul {
 nav ul a { color: var(--cola) }
 nav ul a:hover { color: var(--colb) }
 
-nav span:hover ul, nav ul:hover {
+nav span:hover ul, nav ul:hover, nav span:active ul, nav ul:active {
   display: block;
 }
 
@@ -89,11 +92,11 @@ nav span::after {
 }
 
 #entercon {
-  background-color: #0086EB;
+  background-color: var(--cole);
 }
 
 #entercon:hover {
-  background-color: #10E0FF;
+  background-color: var(--cold);
 }
 
 #entercon div {
@@ -102,7 +105,7 @@ nav span::after {
   width: 150%;
   text-align: left;
   padding: 0.5em 1em;
-  background-color: #10E0FF;
+  background-color: var(--cold);
   border-radius: 10px 10px 10px 0;
   left: 0;
   display: none;
@@ -245,6 +248,45 @@ audio::-webkit-media-controls-panel {
   margin: 1em 0;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
+}
+
+#enter {
+  text-align: center;
+  font-family: homestuckRegular;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  clip-path: polygon(10% 5%, 90% 5%, 100% 50%, 90% 95%, 10% 95%, 0% 50%);
+  text-shadow: 0 2px #00aecd;
+  text-transform: uppercase;
+
+  background-image: linear-gradient(0deg, rgba(36,0,2,0.8) 0%, rgba(109,109,109,0.8) 100%), url(https://sahcon.files.wordpress.com/2021/06/vrchaaat.png);
+  background-size: cover;
+
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--colc); */
+}
+
+#enter a {
+  color: var(--cole);
+  text-decoration: none;
+}
+
+#enter a:hover {
+  color: var(--cold)
+}
+
+#big {
+  font-size: 4em;
+}
+
+#small {
+  font-size: 2em;
 }
 
 /* Foot */
