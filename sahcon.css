@@ -351,4 +351,16 @@ audio::-webkit-media-controls-panel {
   #foot {
     padding-right: 1em;
   }
+
+  #big {
+    font-size: xx-large;
+  }
+
+  #small {
+    font-size: x-large;
+  }
+
+  #enter {
+    height: 6em;
+  }
 }
