@@ -325,3 +325,30 @@ audio::-webkit-media-controls-panel {
     display: none;
   }
 }
+
+/* PHONE */
+
+@media only screen and (max-width: 600px) {
+  #flexWrap {
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #right, #left {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #right {
+    padding: 1em
+  }
+
+  #music {
+    display: none;
+  }
+  
+  #foot {
+    padding-right: 1em;
+  }
+}
