@@ -289,7 +289,7 @@ audio::-webkit-media-controls-panel {
   font-size: 2em;
 }
 
-h4 {
+/* h4 {
   display: block;
   float: left;
   margin: 0;
@@ -301,6 +301,41 @@ h4 {
 #credits {
   font-size: large;
   line-height: 1.5em;
+} */
+
+.credTable {
+  font-size: large;
+}
+
+.credTable > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 0.25em 0;
+}
+
+.credTable > div:nth-child(odd) {
+  background-color: black;
+}
+
+.credTable > div > div {
+  width: calc(50% - 1em);
+}
+
+.credTable > div > div:first-child {
+  font-weight: bold;
+  text-align: right;
+}
+
+.credTitle {
+  text-align: center;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: homestuckRegular;
+  font-weight: 400;
+  font-size: 2em;
 }
 
 /* Foot */
