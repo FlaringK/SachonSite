@@ -366,6 +366,10 @@ audio::-webkit-media-controls-panel {
   transition: opacity 0.25s;
 }
 
+#daytah.hidden {
+  opacity: 0;
+}
+
 #daytah:hover {
   opacity: 1;
 }

@@ -5,7 +5,9 @@ const getUrlPage = () => {
 }
 
 const loadPage = async () => {
+  document.getElementById("daytah").className = ""
   pageHtml = await fetch(`./pages/${getUrlPage()}.html`).then(e => e.text())
+  document.getElementById("daytah").className = "hidden"
 
   document.getElementById("content").innerHTML = pageHtml
   window.scrollTo(0, 0);
