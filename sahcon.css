@@ -43,6 +43,7 @@ nav {
 
 nav a {
   text-decoration: none;
+  color: black;
 }
 
 nav > *:hover {
@@ -59,7 +60,7 @@ nav > * {
   color: black;
 }
 
-nav > a:hover {
+nav a:hover {
   color: black;
 }
 
@@ -337,6 +338,10 @@ audio::-webkit-media-controls-panel {
   font-family: homestuckRegular;
   font-weight: 400;
   font-size: 2em;
+}
+
+.landingList {
+  font-size: large;
 }
 
 /* Foot */
