@@ -261,7 +261,7 @@ audio::-webkit-media-controls-panel {
   text-shadow: 0 2px #00aecd;
   text-transform: uppercase;
 
-  background-image: linear-gradient(0deg, rgba(36,0,2,0.8) 0%, rgba(109,109,109,0.8) 100%), url(https://sahcon.files.wordpress.com/2021/06/vrchaaat.png);
+  background-image: linear-gradient(0deg, rgba(36,0,2,0.8) 0%, rgba(109,109,109,0.8) 100%), url(./assets/vrchaaat.png);
   background-size: cover;
 
   height: 200px;
@@ -370,6 +370,21 @@ audio::-webkit-media-controls-panel {
   font-weight: 600;
 }
 
+.cardHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cardHolder > div {
+  width: 30%;
+}
+
+.cardHolder img {
+  height: 250px;
+  object-fit: cover;
+}
+
 /* Foot */
 
 #foot ul {
@@ -459,5 +474,9 @@ audio::-webkit-media-controls-panel {
 
   .alley > div {
     flex-wrap: wrap;
+  }
+
+  .cardHolder > div {
+    width: unset;
   }
 }
