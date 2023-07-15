@@ -448,4 +448,16 @@ audio::-webkit-media-controls-panel {
   #enter {
     height: 6em;
   }
+
+  .alley > div:nth-child(odd) p {
+    order: unset;
+  }
+
+  .alley > div * {
+    width: unset !important;
+  }
+
+  .alley > div {
+    flex-wrap: wrap;
+  }
 }
