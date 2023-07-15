@@ -344,6 +344,32 @@ audio::-webkit-media-controls-panel {
   font-size: large;
 }
 
+.alley > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  margin: 1em 0;
+}
+
+.alley > div div {
+  width: 60%;
+}
+
+.alley > div:nth-child(odd) p {
+  order: -1;
+}
+
+.alley > div p {
+  width: 35%;
+  color: var(--c, black);
+  background-color: var(--b, #eeeeee);
+  padding: 12px 5%;
+  /* border: 1px dashed gray; */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
 /* Foot */
 
 #foot ul {
