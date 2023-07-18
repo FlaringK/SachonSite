@@ -196,8 +196,9 @@ nav span::after {
   align-items: center;
 }
 
-#quicklinks a {
+#quicklinks > * {
   width: 33%;
+  margin: 0 -2.5%;
 }
 
 #quicklinks img {
@@ -226,7 +227,7 @@ h1, h2 {
   color: black;
   border: solid var(--colb) !important;
   padding: 0 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 #music {
@@ -252,6 +253,8 @@ audio::-webkit-media-controls-panel {
   font-weight: 600;
 }
 
+/* HOME */
+
 #enter {
   text-align: center;
   font-family: homestuckRegular;
@@ -261,7 +264,7 @@ audio::-webkit-media-controls-panel {
   text-shadow: 0 2px #00aecd;
   text-transform: uppercase;
 
-  background-image: linear-gradient(0deg, rgba(36,0,2,0.8) 0%, #79234077 100%), url(./assets/vrchat.jpg);
+  background-image: linear-gradient(0deg, rgba(36,0,2,0.8) 0%, #79234077 100%), url(./assets/vrchat.png);
   background-size: cover;
 
   height: 200px;
@@ -291,19 +294,7 @@ audio::-webkit-media-controls-panel {
   font-size: 2em;
 }
 
-/* h4 {
-  display: block;
-  float: left;
-  margin: 0;
-  margin-right: 1em;
-  width: calc(50% - 0.5em);
-  text-align: right;
-}
-
-#credits {
-  font-size: large;
-  line-height: 1.5em;
-} */
+/* CREDITS */
 
 .credTable {
   font-size: large;
@@ -344,6 +335,8 @@ audio::-webkit-media-controls-panel {
   font-size: large;
 }
 
+/* ARTISTS */
+
 .alley > div {
   display: flex;
   justify-content: space-between;
@@ -370,6 +363,8 @@ audio::-webkit-media-controls-panel {
   font-weight: 600;
 }
 
+/* ACTIVITES */
+
 .cardHolder {
   display: flex;
   flex-wrap: wrap;
@@ -383,6 +378,39 @@ audio::-webkit-media-controls-panel {
 .cardHolder img {
   height: 300px;
   object-fit: cover;
+}
+
+/* GUESTS */
+
+#guestWheel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: homestuckRegular;
+}
+
+#guestWheel > div {
+  width: 30%;
+  margin: 0 -2%;
+}
+
+#guestWheel a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  transition: transform 0.1s;
+  transform-origin: 50% 70%;
+}
+
+#guestWheel a:hover {
+  transform: scale(1.15);
+  z-index: 1;
+}
+
+#guestWheel img {
+  margin-bottom: -10px;
 }
 
 /* Foot */
