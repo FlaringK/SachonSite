@@ -389,6 +389,7 @@ audio::-webkit-media-controls-panel {
   text-align: center;
   text-transform: uppercase;
   font-family: homestuckRegular;
+  margin: 1em 0;
 }
 
 #guestWheel > div {

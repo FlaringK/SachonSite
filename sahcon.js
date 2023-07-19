@@ -11,6 +11,8 @@ const loadPage = async () => {
 
   document.getElementById("content").innerHTML = pageHtml
   window.scrollTo(0, 0);
+
+  document.querySelectorAll("#content .pageLink").forEach(a => { a.addEventListener("click", evt => clickLink(evt, a.href)) })
 }
 
 const clickLink = (event, link) => {
