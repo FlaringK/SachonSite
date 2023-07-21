@@ -145,7 +145,7 @@ nav span::after {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: ticker;
-  animation-duration: 30s;
+  animation-duration: 40s;
 }
 
 .ticker-transition:active {
@@ -251,6 +251,25 @@ audio::-webkit-media-controls-panel {
   margin: 1em 0;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
+}
+
+/* Details */
+
+details {
+  margin: 1em;
+}
+
+summary {
+  font-family: homestuckRegular;
+  font-weight: 400;
+  border-bottom: currentColor solid;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: x-large;
+}
+
+summary:hover {
+  color: var(--cola)
 }
 
 /* HOME */
