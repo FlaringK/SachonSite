@@ -3,15 +3,27 @@
   src: url(./assets/HOMESTUCK\ REGULAR\ \(EPILOGUES\ FONT\).TTF);
 }
 
+@font-face {
+  font-family: Platypi;
+  src: url(./assets/Platypi-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: PlatypiI;
+  src: url(./assets/Platypi-Italic-VariableFont_wght.ttf);
+}
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Platypi;
 
-  --cola: #D8F090;
-  --colb: #C0D818;
-  --colc: #1f0e20;
-  --cold: #10E0FF;
-  --cole: #0086EB;
+  --cola: #8bdcbe;
+  --colb: #6ab488;
+  --colc: #0f061d;
+  --cold: #99987d;
+  --cole: #85684f;
+
+  --black: black;
 
   background-color: var(--colc);
   color: var(--colb)
@@ -20,10 +32,41 @@ body {
 #main {
   max-width: 1200px;
   margin: auto;
+  padding: 0 1em 0.25em;
+
+  background-color: var(--colc);
+
 }
 
 a { color: var(--colb); }
 a:hover { color: var(--cola); }
+
+/* COOL GRID THAT MIGHT BE A MISTAKE */
+
+#background {
+  background-image: 
+    linear-gradient(45deg, var(--colb) 25%, transparent 25%), 
+    linear-gradient(-45deg, var(--colb) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, var(--cole) 75%), 
+    linear-gradient(-45deg, transparent 75%, var(--cole) 75%);
+  background-size: 200px 200px;
+  background-position: 0 0, 0 100px, 100px -100px, -100px 0px;
+
+  position: fixed;
+  inset: -100vw;
+  z-index: -10;
+  rotate: 45deg;
+
+  opacity: 0.5;
+
+  animation: bg 15s linear forwards infinite;
+}
+
+@keyframes bg {
+  0% { background-position: 0 0, 0 100px, 100px -100px, -100px 0px;}
+  50% { background-position: 100px 100px, 100px 200px, 200px -200px, -200px 100px; }
+  100% { background-position: 200px 200px, 200px 300px, 300px -300px, -300px 200px;}
+}
 
 /* BANNER */
 
@@ -43,7 +86,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: var(--black);
 }
 
 nav > *:hover {
@@ -57,11 +100,11 @@ nav > * {
 
   background-color: var(--colb);
   padding: 0.25em 0.1em;
-  color: black;
+  color: var(--black);
 }
 
 nav a:hover {
-  color: black;
+  color: var(--black);
 }
 
 nav ul {
@@ -76,7 +119,7 @@ nav ul {
   margin: 0;
   width: max-content;
 
-  background-color: black;
+  background-color: var(--black);
   padding: 0.5em 1em;
   border-radius: 0 10px 10px 10px;
 }
@@ -119,8 +162,8 @@ nav span::after {
 .ticker-container {
   width: 100%;
   overflow: hidden;
-  background-color: black;
-  font-family: homestuckRegular;
+  background-color: var(--black);
+  font-family: PlatypiI;
 }
 
 .ticker-wrapper {
@@ -224,7 +267,7 @@ h1, h2 {
 
 #dates {
   background-color: var(--colb);
-  color: black;
+  color: var(--black);
   border: solid var(--colb) !important;
   padding: 0 1em;
   margin-bottom: 0.5em;
@@ -245,7 +288,7 @@ audio::-webkit-media-controls-panel {
 }
 
 .log {
-  color: black;
+  color: var(--black);
   padding: 12px 5%;
   border: 1px dashed gray;
   margin: 1em 0;
@@ -280,7 +323,7 @@ summary:hover {
   margin-bottom: 0.5em;
   padding: 0.5em;
   clip-path: polygon(10% 5%, 90% 5%, 100% 50%, 90% 95%, 10% 95%, 0% 50%);
-  text-shadow: 0 2px #00aecd;
+  text-shadow: 0 2px var(--colb);
   text-transform: uppercase;
 
   background-image: linear-gradient(0deg, rgba(36,0,2,0.8) 0%, #79234077 100%), url(./assets/vrchat.png);
@@ -297,12 +340,12 @@ summary:hover {
 }
 
 #enter a {
-  color: var(--cole);
+  color: var(--cola);
   text-decoration: none;
 }
 
 #enter a:hover {
-  color: var(--cold)
+  color: var(--colb)
 }
 
 #big {
@@ -328,7 +371,7 @@ summary:hover {
 }
 
 .credTable > div:nth-child(odd) {
-  background-color: black;
+  background-color: var(--black);
 }
 
 .credTable > div > div {
@@ -374,7 +417,7 @@ summary:hover {
 
 .alley > div p {
   width: 35%;
-  color: var(--c, black);
+  color: var(--c, var(--black));
   background-color: var(--b, #eeeeee);
   padding: 12px 5%;
   /* border: 1px dashed gray; */
@@ -527,5 +570,13 @@ summary:hover {
 
   .cardHolder > div {
     width: unset;
+  }
+
+  #background {
+    display: none;
+  }
+
+  #main {
+    padding: 0;
   }
 }
