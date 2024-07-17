@@ -25,3 +25,8 @@ const clickLink = (event, link) => {
 document.querySelectorAll(".pageLink").forEach(a => { a.addEventListener("click", evt => clickLink(evt, a.href)) })
 
 loadPage()
+
+document.getElementById("bgOff").onclick = () => {
+  document.getElementById("bgOff").remove()
+  document.body.className = "access"
+}

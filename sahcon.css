@@ -26,7 +26,8 @@ body {
   --black: black;
 
   background-color: var(--colc);
-  color: var(--colb)
+  color: var(--colb);
+
 }
 
 #main {
@@ -62,10 +63,28 @@ a:hover { color: var(--cola); }
   animation: bg 15s linear forwards infinite;
 }
 
+.access #background {
+  animation: none;
+}
+
 @keyframes bg {
   0% { background-position: 0 0, 0 100px, 100px -100px, -100px 0px;}
   50% { background-position: 100px 100px, 100px 200px, 200px -200px, -200px 100px; }
   100% { background-position: 200px 200px, 200px 300px, 300px -300px, -300px 200px;}
+}
+
+.impButton {
+  display: block;
+  background-color: var(--cola);
+  border: var(--colb) solid;
+  margin:  0.5em auto;
+  font-family: PlatypiI;
+  cursor: pointer;
+}
+
+.impButton:hover {
+  background-color: var(--colb);
+  border: var(--cola) solid;
 }
 
 /* BANNER */
@@ -253,6 +272,7 @@ nav span::after {
   transform: scale(1.2);
 }
 
+
 h1, h2 {
   font-family: homestuckRegular;
   font-weight: 400;
@@ -271,6 +291,10 @@ h1, h2 {
   border: solid var(--colb) !important;
   padding: 0 1em;
   margin-bottom: 0.5em;
+}
+
+#dates a {
+  color: var(--black);
 }
 
 #music {
@@ -476,6 +500,50 @@ summary:hover {
   margin-bottom: -10px;
 }
 
+/* Guests 2024 */
+
+#guestWheel24 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: homestuckRegular;
+  flex-wrap: wrap;
+
+  margin: 1em 0;
+  font-size: 1.35em;
+
+  outline: var(--cole) solid 0.5em;
+  border: var(--colc) solid 0.5em;
+}
+
+#guestWheel24 > div {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+#guestWheel24 a { color: var(--colc); }
+#guestWheel24 a:hover { color: var(--cola); }
+
+#guestWheel24 img {
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+#guestWheel24 span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 10;
+}
+
 /* Foot */
 
 #foot ul {
@@ -578,5 +646,9 @@ summary:hover {
 
   #main {
     padding: 0;
+  }
+
+  #bgOff {
+    display: none;
   }
 }
