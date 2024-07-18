@@ -449,6 +449,47 @@ summary:hover {
   font-weight: 600;
 }
 
+.alley24 > div { 
+  position: relative;
+  padding-bottom: 5em;
+}
+
+.alley24 img { 
+  border: var(--cole) solid 0.25em;
+  border-color: var(--cole) var(--cold) var(--cold) var(--cole);
+  width: 70%;
+}
+
+.alley24 > div:nth-child(odd) img {
+  display: block;
+  margin-left: auto;
+}
+
+.alley24 > div p {
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+
+  border: solid red 0.25em;
+  border-color: var(--cole) var(--cold) var(--cold) var(--cole);
+  background-color: var(--colc);
+  padding: 0.5em 1em;
+}
+
+.alley24 > div:nth-child(odd) p {
+  left: unset;
+  right: 1em;
+}
+
+.alley24 .name {
+  font-size: 1.25em;
+}
+
+.alley24 .pronouns {
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
 /* ACTIVITES */
 
 .cardHolder {
@@ -634,6 +675,10 @@ summary:hover {
 
   .alley > div {
     flex-wrap: wrap;
+  }
+
+  .alley24 img { 
+    width: 100%;
   }
 
   .cardHolder > div {
